@@ -30,6 +30,10 @@ app.get('/increment', (req, res) => {
   res.send(`Current count: ${counter}`)
 })
 
+app.get('/ip',(req,res)=> {
+  res.send(process.env.HOSTNAME)
+})
+
 app.listen(port)
 
 function logger() {
